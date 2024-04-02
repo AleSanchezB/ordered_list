@@ -93,9 +93,9 @@ void DoublyLinkedList<T>::insertLast(T value)
 template <typename T>
 void DoublyLinkedList<T>::insertIndicatedIndex(T value, int index)
 {
-    if (index < 0 || index >= size()) throw OutRange();
+    if (index < 0 || index > size()) throw OutRange();
     if (index == 0) insertBeginning(value);
-    else if (index == size()-1) insertLast(value);
+    else if (index == size()) insertLast(value);
     else
     {
         Element *aux = first;
@@ -303,6 +303,7 @@ void DoublyLinkedList<T>::deleteOcurrence(T value)
         if (aux->value == value) {
             aux = aux->next;
             deleteIndicatedIndex(index);
+            std::cout << index << std::endl;
         } else {
             index++;
             aux = aux->next;
