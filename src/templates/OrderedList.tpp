@@ -32,17 +32,27 @@ OrderedList<T> & OrderedList<T>::operator=(const OrderedList<T> &l){
 }
 // **************************************************************
 // Metodo insertar al principio de la lista
-template <typename T>
-void OrderedList<T>::add(T value)
-{
-    list.insertLast(value);
+template <typename T> void OrderedList<T>::add(T value) {
+    int i = 0;
+    if (!list.isEmpty())
+      for (i = 0; i < list.size() && value > list[i]; ++i)
+          ;
+    list.insertIndicatedIndex(value, i);
 }
 // **************************************************************
 // Metodo eliminar primer elemento de la lista
 template <typename T>
 void OrderedList<T>::pop()
 {
-    list.deleteLast();
+    if (!list.isEmpty())
+        for (int i = 0; i < list.size(); ++i) {
+            for (int j = i + 1; j < list.size(); ++j) {
+                if (list[i] == list[j]) {
+                    list.deleteIndicatedIndex(j);
+                    return;
+                }
+            }
+        }
 }
 // **************************************************************
 // Metodo para verificar si existe un elemento en la lista
