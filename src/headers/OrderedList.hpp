@@ -156,6 +156,7 @@ public:
      */
     // Constructor
     OrderedList();
+    OrderedList(const OrderedList<T>& l1, const OrderedList<T>& l2);
     /**
      * \brief Destructor que libera la memoria de la lista doble.
      */
@@ -181,15 +182,15 @@ public:
      * \brief Agrega un nuevo elemento al principio de la lista doble.
      * \param value El valor a agregar.
      */
-    void insertBeginning(T value);
+    void add(T value);
     /**
      * \brief Elimina el primer elemento de la lista doble.
      */
-    void deleteFirst();
+    void pop();
     /**
      * \brief Elimina el ultimo elemento de la lista doble.
      */
-    T searchValue(T value) const;
+    bool searchValue(T value) const;
     /**
      * \brief Regresa inciso del valor a buscar.
      * \param value valor que buscaremos en la lista.
@@ -217,16 +218,6 @@ public:
      */
     void printBackwards() const;
     /**
-     * \brief Elimina la primera ocurrencia de un valor específico en la lista.
-     * \param value El valor a eliminar.
-     */
-    void deleteOcurrence(T value);
-    /**
-     * \brief Ordena los elementos de la lista según una condición específica proporcionada por el usuario.
-     * \param condition Un puntero a función que define la condición de ordenamiento. Esta función debe tomar dos elementos de tipo T y devolver un valor booleano.
-     */
-    void sort(bool (*condition)(const T&, const T&));
-    /**
      * \brief Sobrecarga del operador de acceso para obtener el elemento en una posición específica de la lista de forma constante.
      * \param i El índice del elemento a obtener.
      * \return Una referencia constante al elemento en el índice especificado.
@@ -244,7 +235,7 @@ public:
      * \brief Intercambia todos los elementos de esta lista con los de otra lista.
      * \param l La lista con la que se intercambiarán los elementos.
      */
-    OrderedList<T> merge(OrderedList<T> &l, OrderedList<T> &m);
+    OrderedList<T> merge(const OrderedList<T> &l);
 
     /**
      * \class ListEmpty
