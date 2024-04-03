@@ -31,18 +31,27 @@ OrderedList<T> & OrderedList<T>::operator=(const OrderedList<T> &l){
     this->list = l->list;
 }
 // **************************************************************
-// Metodo insertar al principio de la lista
-template <typename T>
-void OrderedList<T>::add(T value)
-{
-    list.insertLast(value);
+// Metodo insertar elemento en su respectiva posición
+template <typename T> void OrderedList<T>::add(T value) {
+    int i = 0;
+    if (!list.isEmpty())
+        for (i = 0; i < list.size() && value > list[i]; ++i);
+    list.insertIndicatedIndex(value, i);
 }
 // **************************************************************
-// Metodo eliminar primer elemento de la lista
+// Metodo para eliminar elemento repetido en la lista
 template <typename T>
 void OrderedList<T>::pop()
 {
-    list.deleteLast();
+    if (!list.isEmpty())
+        for (int i = 0; i < list.size(); ++i) {
+            for (int j = i + 1; j < list.size(); ++j) {
+                if (list[i] == list[j]) {
+                    list.deleteIndicatedIndex(j);
+                    return;
+                }
+            }
+        }
 }
 // **************************************************************
 // Metodo para verificar si existe un elemento en la lista
@@ -78,7 +87,8 @@ template <typename T>
 void OrderedList<T>::printForward() const {
     list.printForward();
 }
-// Metodo para ordenar de forma ascendente
+// **************************************************************
+// Metodo para mezclar dos listas
 template <typename T>
 OrderedList<T> OrderedList<T>::merge(const OrderedList<T>& l)
 {
@@ -92,13 +102,14 @@ void OrderedList<T>::printBackwards() const
     list.printBackwards();
 }
 /*******************************************************************/
-// Metodo para imprimir la lista de ultimo a primero
+// Metodo operador []
 template <typename T>
 T& OrderedList<T>::operator[](int i)
 {
     return list[i];
 }
 /*******************************************************************/
+// Metodo operador [] constante
 template <typename T>
 const T& OrderedList<T>::operator[](int i) const
 {
@@ -106,15 +117,15 @@ const T& OrderedList<T>::operator[](int i) const
 }
 
 /*******************************************************************/
-
+// Metodo que reggresa una excepcion de tipo "Empty list"
 template <typename T>
 const char *OrderedList<T>::ListEmpty::what() const throw() {
     return "Empty list";
 }
 
 /*********************************************************************/
-
+// Metodo que reggresa una excepcion de tipo "Out of range"
 template <typename T>
 const char *OrderedList<T>::OutRange::what() const throw() {
-    return "Out the range";
+    return "Out of range";
 }

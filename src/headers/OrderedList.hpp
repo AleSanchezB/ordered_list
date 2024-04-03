@@ -16,11 +16,11 @@
 
 /** \class OrderedList
  *
- * Esta clase template ofrece una implementaci&oacute;n de lista doble con operaciones
+ * Esta clase template ofrece una implementaci&oacute;n de lista ordenada doble con operaciones
  para agregar,
- * eliminar elementos, y consultar el ultimo de la lista, entre otras.
+ * eliminar elementos entre otras.
  *
- * \tparam T Tipo de elementos almacenados en la lista doble.
+ * \tparam T Tipo de elementos almacenados en la lista ordenada doble.
  *
  *
  *
@@ -42,7 +42,7 @@
 
 int main() {
 try {
-    
+
         OrderedList<int> list;
 
         // Insertar elementos al principio y al final
@@ -51,7 +51,7 @@ try {
            list.insertLast(4);
            list.insertLast(1);
            list.insertLast(5);
-            
+
         // Insertar en índice indicado
            list.insertIndicatedIndex(9, 2); // Inserta el 9 en la posición 2
 
@@ -152,13 +152,13 @@ template <typename T>
 class OrderedList{
 public:
     /**
-     * \brief Constructor por defecto que inicializa una lista doble vac&iacute;a.
+     * \brief Constructor por defecto que inicializa una lista ordenada doble vac&iacute;a.
      */
     // Constructor
     OrderedList();
     OrderedList(const OrderedList<T>& l1, const OrderedList<T>& l2);
     /**
-     * \brief Destructor que libera la memoria de la lista doble.
+     * \brief Destructor que libera la memoria de la lista ordenada doble.
      */
     // Destructor
     ~OrderedList();
@@ -170,8 +170,8 @@ public:
     OrderedList(const OrderedList<T> & list);
     /**
      * \brief Sobrecarga del operador de asignaci&oacute;n.
-     * \param list Otra lista doble de la cual se copiar&aacute;n los elementos.
-     * \exception const <b>char *</b> La lista doble copia no puede ser creado.
+     * \param list Otra lista ordenada doble de la cual se copiar&aacute;n los elementos.
+     * \exception const <b>char *</b> La lista ordenada doble copia no puede ser creado.
      *
      * \return Referencia a la lista actual.
      */
@@ -179,17 +179,18 @@ public:
     OrderedList<T> & operator=(const OrderedList<T> & list);
 
     /**
-     * \brief Agrega un nuevo elemento al principio de la lista doble.
+     * \brief Agrega un nuevo elemento ordenadamente en laa posición que le corresponde al elemento.
      * \param value El valor a agregar.
      */
     void add(T value);
     /**
-     * \brief Elimina el primer elemento de la lista doble.
+     * \brief Elimina cualquier elemento repetido de la lista.
      */
     void pop();
     /**
-     * \brief Elimina el ultimo elemento de la lista doble.
-     */
+    * \brief Busca elemento en la lista.
+    * \param value Valor a verificar si esta en la lista.
+    */
     bool searchValue(T value) const;
     /**
      * \brief Regresa inciso del valor a buscar.
@@ -262,8 +263,9 @@ public:
          */
         virtual const char *what() const throw();
     };
+
 private:
-    // Tamaño de la lista doblemente enlazada
+    // Variable de una lista doblemente enlazada
     DoublyLinkedList<T> list;
 };
 
