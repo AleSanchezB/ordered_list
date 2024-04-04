@@ -3,7 +3,6 @@
 #include "headers/OrderedList.hpp"
 
 int main() {
-
     try
     {
         srand(time(nullptr));
@@ -110,6 +109,7 @@ int main() {
     {
         std::cout << msg.what() << std::endl;
     }
-
     return 0;
 }
+ 
+   
