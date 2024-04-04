@@ -265,6 +265,7 @@ public:
 private:
     // Tamaño de la lista doblemente enlazada
     DoublyLinkedList<T> list;
+    bool orderAscent(int a, int b) const;
 };
 
 #include "../templates/OrderedList.tpp"
