@@ -8,7 +8,7 @@ template <typename T>
 OrderedList<T>::OrderedList(const OrderedList<T>& l1, const OrderedList<T>& l2)
 {
     l1.list.transfer(l2.list);
-    l1.list.sort();
+    l1.list.sort(orderAscent);
 }
 // **************************************************************
 // Metodo destructor
@@ -90,9 +90,10 @@ void OrderedList<T>::printForward() const {
 // **************************************************************
 // Metodo para mezclar dos listas
 template <typename T>
-OrderedList<T> OrderedList<T>::merge(const OrderedList<T>& l)
-{
-    return OrderedList(this, l);
+OrderedList<T> OrderedList<T>::merge(const OrderedList<T> &l) {
+    OrderedList<T> r;
+    
+    return r;
 }
 // **************************************************************
 // Metodo para imprimir la lista de ultimo a primero

@@ -267,6 +267,7 @@ public:
 private:
     // Variable de una lista doblemente enlazada
     DoublyLinkedList<T> list;
+    bool orderAscent(int a, int b) const;
 };
 
 #include "../templates/OrderedList.tpp"
