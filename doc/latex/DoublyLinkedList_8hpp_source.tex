@@ -1,0 +1,92 @@
+\doxysection{Doubly\+Linked\+List.\+hpp}
+\hypertarget{DoublyLinkedList_8hpp_source}{}\label{DoublyLinkedList_8hpp_source}\index{src/headers/DoublyLinkedList.hpp@{src/headers/DoublyLinkedList.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ LISTASDOBLEMENTEENLAZADAS\_DOUBLYLINKEDLIST\_HPP}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ LISTASDOBLEMENTEENLAZADAS\_DOUBLYLINKEDLIST\_HPP}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ NO\_ENCONTRADO\ (-\/1)}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <exception>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00151\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00152\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDoublyLinkedList}{DoublyLinkedList}}\{}
+\DoxyCodeLine{00153\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00158\ \ \ \ \ \mbox{\hyperlink{classDoublyLinkedList_ab16fd160493247d26572b9bef7fa078b}{DoublyLinkedList}}();}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{comment}{//\ Destructor}}
+\DoxyCodeLine{00163\ \ \ \ \ \mbox{\hyperlink{classDoublyLinkedList_ade7fbfd3c437d039c88ea9c3b9445150}{\string~DoublyLinkedList}}();}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{comment}{//\ Construtor\ de\ copias}}
+\DoxyCodeLine{00169\ \ \ \ \ \mbox{\hyperlink{classDoublyLinkedList_ac36a59cf8b72beba0ad9d3c20e3e0e2c}{DoublyLinkedList}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classDoublyLinkedList}{DoublyLinkedList<T>}}\ \&\ list);}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{comment}{//\ Operador\ de\ asignacion}}
+\DoxyCodeLine{00178\ \ \ \ \ \mbox{\hyperlink{classDoublyLinkedList}{DoublyLinkedList<T>}}\ \&\ \mbox{\hyperlink{classDoublyLinkedList_aff23529f63d6501335018bc1125903c1}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classDoublyLinkedList}{DoublyLinkedList<T>}}\ \&\ list);}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoublyLinkedList_a58e19a65eb23646145608aeae4416700}{insertBeginning}}(T\ value);}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoublyLinkedList_af1f129cfc6c6e2167f6d6a33aa2d32ee}{insertLast}}(T\ value);}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoublyLinkedList_ade8ed2122d4c871ad4ef3a1610787fac}{insertIndicatedIndex}}(T\ value,\ \textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoublyLinkedList_a4c1e50e3ec512527439c213ea54ab733}{deleteFirst}}();}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoublyLinkedList_a7a7c775828cf7eaa02a44aa6ffba20b5}{deleteLast}}();}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoublyLinkedList_a382de72523d170e53533813a7ef68a41}{deleteIndicatedIndex}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classDoublyLinkedList_a62bbef296fa5ce6ca5191569f018f89f}{searchValue}}(T\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classDoublyLinkedList_a60cb13a1e90d8d73cd0579460433857c}{searchIndex}}(T\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classDoublyLinkedList_abb8d754d9bf173fb01c5bb94617c95fc}{isEmpty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00228\ \ \ \ \ T\ \mbox{\hyperlink{classDoublyLinkedList_abc3dcd3694733717e7c4bc9113681948}{getFirstValue}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00233\ \ \ \ \ T\ \mbox{\hyperlink{classDoublyLinkedList_a536a3bbb5e5f39bd24a37814eecf5e6c}{getLastValue}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00238\ \ \ \ \ T\&\ \mbox{\hyperlink{classDoublyLinkedList_ad60c40161f8e8828872ebd5e51bf8ba0}{getValueIndicatedIndex}}(\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoublyLinkedList_ab65a25099e8de1d4fba0c8bcf6025f45}{modifyValueIndicatedIndex}}(\textcolor{keywordtype}{int}\ index,T\ value);}
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classDoublyLinkedList_a45f0098f13120efa3f63f2e9d545cbb1}{size}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoublyLinkedList_a988dab817e94dc8f7b0e8e5b90383971}{clear}}();}
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoublyLinkedList_aefa5cc3a0667c4962ba5102cb92555eb}{printForward}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoublyLinkedList_ad1a720f90d4d20650ca421154b7807d6}{printBackwards}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoublyLinkedList_ab8d58fb70ca34bb567dd099fc47e4b2a}{deleteOcurrence}}(T\ value);}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoublyLinkedList_aaf6a6a0d88c74268f8dc7778400b3eb3}{deleteCondition}}(\textcolor{keywordtype}{bool}\ (*func)(\textcolor{keyword}{const}\ T\&));}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoublyLinkedList_ad3a3cefb04c8daee8c056a8def1499f4}{deleteRepeat}}();}
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoublyLinkedList_a8495bcf1902764e5771fb12602db3fa8}{sort}}(\textcolor{keywordtype}{bool}\ (*condition)(\textcolor{keyword}{const}\ T\&,\ \textcolor{keyword}{const}\ T\&));}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoublyLinkedList_a3f9ef00928eead91e84a4ffb538aded2}{transfer}}(\mbox{\hyperlink{classDoublyLinkedList}{DoublyLinkedList<T>}}\&\ l);}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoublyLinkedList_aaed7bd686a991fa6f54d2b82ead52181}{transfer}}(\mbox{\hyperlink{classDoublyLinkedList}{DoublyLinkedList<T>}}\ \&l,\ \textcolor{keywordtype}{int}\ initial,\ \textcolor{keywordtype}{int}\ \textcolor{keyword}{final});}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00303\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoublyLinkedList_a56ba8e31d8c1f776289949f450e3643c}{transfer}}(\mbox{\hyperlink{classDoublyLinkedList}{DoublyLinkedList<T>}}\&\ l,\ \textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00304\ }
+\DoxyCodeLine{00310\ \ \ \ \ \textcolor{keyword}{const}\ T\ \&\ \mbox{\hyperlink{classDoublyLinkedList_a7891d97504db7d2a9f48768981a6582a}{operator[]}}(\textcolor{keywordtype}{int}\ i)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00317\ \ \ \ \ T\ \&\ \mbox{\hyperlink{classDoublyLinkedList_a834f6141fd7884eec8ac85775e8ef88d}{operator[]}}(\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00318\ }
+\DoxyCodeLine{00323\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoublyLinkedList_a36aa2c9a4f0f134029cb5bbd9d180fc6}{intercambiar}}(\mbox{\hyperlink{classDoublyLinkedList}{DoublyLinkedList<T>}}\ \&l);}
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00329\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDoublyLinkedList_1_1ListEmpty}{ListEmpty}}\ :\ \textcolor{keyword}{public}\ std::exception\ \{}
+\DoxyCodeLine{00330\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classDoublyLinkedList_1_1ListEmpty_aa75e868982efba91ff03e514d2021b85}{what}}()\ \textcolor{keyword}{const}\ throw();}
+\DoxyCodeLine{00336\ \ \ \ \ \};}
+\DoxyCodeLine{00337\ }
+\DoxyCodeLine{00342\ \ \ \ \ class\ \mbox{\hyperlink{classDoublyLinkedList_1_1OutRange}{OutRange}}\ :\ public\ std::exception\ \{}
+\DoxyCodeLine{00343\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classDoublyLinkedList_1_1OutRange_adcba3a7c486dd1b9fd964687faa05b02}{what}}()\ \textcolor{keyword}{const}\ throw();}
+\DoxyCodeLine{00349\ \ \ \ \ \};}
+\DoxyCodeLine{00350\ private:}
+\DoxyCodeLine{00351\ \ \ \ \ \textcolor{comment}{//\ Tamaño\ de\ la\ lista\ doblemente\ enlazada}}
+\DoxyCodeLine{00352\ \ \ \ \ \textcolor{keywordtype}{int}\ size\_;}
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00354\ \ \ \ \ \textcolor{comment}{//\ Doubly\ linked\ list}}
+\DoxyCodeLine{00355\ \ \ \ \ struct\ Element\{}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Constructor\ por\ default\ del\ struct}}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ Element(T\ value,\ Element\ *next\ =\ \textcolor{keyword}{nullptr},\ Element\ *previous\ =\ \textcolor{keyword}{nullptr})\ ;}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ T\ value;}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ Element\ *next;}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ Element\ *previous;}
+\DoxyCodeLine{00361\ \ \ \ \ \};}
+\DoxyCodeLine{00362\ }
+\DoxyCodeLine{00363\ \ \ \ \ Element\ *first;}
+\DoxyCodeLine{00364\ \ \ \ \ Element\ *last;}
+\DoxyCodeLine{00365\ \};}
+\DoxyCodeLine{00366\ }
+\DoxyCodeLine{00367\ \textcolor{preprocessor}{\#include\ "{}../templates/DoublyLinkedList.tpp"{}}}
+\DoxyCodeLine{00368\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//LISTASDOBLEMENTEENLAZADAS\_DOUBLYLINKEDLIST\_H}}
+
+\end{DoxyCode}

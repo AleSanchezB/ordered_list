@@ -1,0 +1,61 @@
+\doxysection{Ordered\+List.\+hpp}
+\hypertarget{OrderedList_8hpp_source}{}\label{OrderedList_8hpp_source}\index{src/headers/OrderedList.hpp@{src/headers/OrderedList.hpp}}
+\mbox{\hyperlink{OrderedList_8hpp}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ ORDEREDLIST\_HPP}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ ORDEREDLIST\_HPP}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ NO\_ENCONTRADO\ (-\/1)}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <exception>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}DoublyLinkedList.hpp"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00151\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00152\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classOrderedList}{OrderedList}}\{}
+\DoxyCodeLine{00153\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00158\ \ \ \ \ \mbox{\hyperlink{classOrderedList_a1c1251b4f1fd924fd55a8d616b3436bd}{OrderedList}}();}
+\DoxyCodeLine{00159\ \ \ \ \ \mbox{\hyperlink{classOrderedList_a1c1251b4f1fd924fd55a8d616b3436bd}{OrderedList}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classOrderedList}{OrderedList<T>}}\&\ l1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classOrderedList}{OrderedList<T>}}\&\ l2);}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{comment}{//\ Destructor}}
+\DoxyCodeLine{00164\ \ \ \ \ \mbox{\hyperlink{classOrderedList_a1d5ba93c6bdeecf3a39b0443143b9e54}{\string~OrderedList}}();}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{comment}{//\ Construtor\ de\ copias}}
+\DoxyCodeLine{00170\ \ \ \ \ \mbox{\hyperlink{classOrderedList_a9c8d2b9f16ca5034a8b47b0944036e90}{OrderedList}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classOrderedList}{OrderedList<T>}}\ \&\ list);}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{comment}{//\ Operador\ de\ asignacion}}
+\DoxyCodeLine{00179\ \ \ \ \ \mbox{\hyperlink{classOrderedList}{OrderedList<T>}}\ \&\ \mbox{\hyperlink{classOrderedList_a9a222042d6b3fbe5a966db21fc907c0c}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classOrderedList}{OrderedList<T>}}\ \&\ list);}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOrderedList_a8c9935f05461c8de55ac2253ed7d97b6}{add}}(T\ value);}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOrderedList_a5ec125e7164ec86cdbeb22f3f1b32c01}{pop}}();}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classOrderedList_a76ce6ca21029d8f56213186e49e1f36d}{searchValue}}(T\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classOrderedList_a32621295bcd188a8b456c62c85516634}{searchIndex}}(T\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classOrderedList_a95620d15c2a69db647941c3929f84e51}{isEmpty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classOrderedList_a192fd967f3602dc0d0a5e67e17116f99}{size}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOrderedList_a57080a867a92b16919c89f84896d4400}{clear}}();}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOrderedList_a3ff74745c908823479d65231b41e8f18}{printForward}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOrderedList_a478d10e9bf21ce2784b092c62efb65b6}{printBackwards}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keyword}{const}\ T\ \&\ \mbox{\hyperlink{classOrderedList_a054b6339444c4d1562a9ae0ed5fbcffd}{operator[]}}(\textcolor{keywordtype}{int}\ i)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00233\ \ \ \ \ T\ \&\ \mbox{\hyperlink{classOrderedList_ad281c39141c85022defa9abd66d807a7}{operator[]}}(\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00239\ \ \ \ \ \mbox{\hyperlink{classOrderedList}{OrderedList<T>}}\ \mbox{\hyperlink{classOrderedList_a94a6e2260aac4e8b9593f9c40cd255f8}{merge}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classOrderedList}{OrderedList<T>}}\ \&l);}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classOrderedList_1_1ListEmpty}{ListEmpty}}\ :\ \textcolor{keyword}{public}\ std::exception\ \{}
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classOrderedList_1_1ListEmpty_a4ff8b605299b3f09fa3ffa62223fc308}{what}}()\ \textcolor{keyword}{const}\ throw();}
+\DoxyCodeLine{00252\ \ \ \ \ \};}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00258\ \ \ \ \ class\ \mbox{\hyperlink{classOrderedList_1_1OutRange}{OutRange}}\ :\ public\ std::exception\ \{}
+\DoxyCodeLine{00259\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classOrderedList_1_1OutRange_af11af672bff69a392651176da91e94f4}{what}}()\ \textcolor{keyword}{const}\ throw();}
+\DoxyCodeLine{00265\ \ \ \ \ \};}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ private:}
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{comment}{//\ Variable\ de\ una\ lista\ doblemente\ enlazada}}
+\DoxyCodeLine{00269\ \ \ \ \ \mbox{\hyperlink{classDoublyLinkedList}{DoublyLinkedList}}<T>\ list;}
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{keywordtype}{bool}\ orderAscent(\textcolor{keywordtype}{int}\ a,\ \textcolor{keywordtype}{int}\ b)\ const;}
+\DoxyCodeLine{00271\ \};}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \textcolor{preprocessor}{\#include\ "{}../templates/OrderedList.tpp"{}}}
+\DoxyCodeLine{00274\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//LISTASDOBLEMENTEENLAZADAS\_DOUBLYLINKEDLIST\_H}}
+
+\end{DoxyCode}

@@ -85,11 +85,11 @@ int main() {
     l2.printForward();
 
     // Mezclar dos listas
-    std::cout << " Lista después de haberlas mezclado: ";
+    std::cout << "Lista después de haberlas mezclado: ";
     l.merge(l2).printForward();
-
+ 
   } catch (std::exception &msg) {
     std::cout << msg.what() << std::endl;
   }
-  return 0;
+  return 0; 
 }

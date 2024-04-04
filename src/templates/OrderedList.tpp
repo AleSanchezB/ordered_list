@@ -7,8 +7,14 @@ template <typename T> OrderedList<T>::OrderedList(){}
 template <typename T>
 OrderedList<T>::OrderedList(const OrderedList<T>& l1, const OrderedList<T>& l2)
 {
-    l1.list.transfer(l2.list);
-    l1.list.sort(orderAscent);
+    if(l1.isEmpty() || l2.isEmpty()) ListEmpty();
+    OrderedList<T> r = l1;
+    for (int i = 0; i < 2; ++i) {
+        for (int j = 0; j < r.size(); ++j) {
+            add(r.list[j]);
+        }
+        r = l2;
+    }
 }
 // **************************************************************
 // Metodo destructor
@@ -27,8 +33,9 @@ OrderedList<T>::OrderedList(const OrderedList<T> & list)
 // **************************************************************
 // Metodo operador de asignación
 template <typename T>
-OrderedList<T> & OrderedList<T>::operator=(const OrderedList<T> &l){
-    this->list = l->list;
+OrderedList<T>& OrderedList<T>::operator=(const OrderedList<T> &l){
+    this->list = l.list;
+    return *this;
 }
 // **************************************************************
 // Metodo insertar elemento en su respectiva posición
@@ -43,7 +50,7 @@ template <typename T> void OrderedList<T>::add(T value) {
 template <typename T>
 void OrderedList<T>::pop()
 {
-    if (!list.isEmpty())
+    if (list.isEmpty()) throw ListEmpty();
         for (int i = 0; i < list.size(); ++i) {
             for (int j = i + 1; j < list.size(); ++j) {
                 if (list[i] == list[j]) {
@@ -91,8 +98,7 @@ void OrderedList<T>::printForward() const {
 // Metodo para mezclar dos listas
 template <typename T>
 OrderedList<T> OrderedList<T>::merge(const OrderedList<T> &l) {
-    OrderedList<T> r;
-    
+    OrderedList<T> r(*this, l);
     return r;
 }
 // **************************************************************

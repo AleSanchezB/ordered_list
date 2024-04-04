@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Lista Ordenada: Archivo de código fuente src/headers/DoublyLinkedList.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Lista Ordenada<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Es una implementacion de listas doblemente enlazadas ordenadas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d0381950fc41278198232cb047ffc1f9.html">headers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">DoublyLinkedList.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef LISTASDOBLEMENTEENLAZADAS_DOUBLYLINKEDLIST_HPP</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define LISTASDOBLEMENTEENLAZADAS_DOUBLYLINKEDLIST_HPP</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define NO_ENCONTRADO (-1)</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;exception&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00152" data-start="{" data-end="};">
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html">  152</a></span><span class="keyword">class </span><a class="code hl_class" href="classDoublyLinkedList.html">DoublyLinkedList</a>{</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="comment">// Constructor</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#ab16fd160493247d26572b9bef7fa078b">  158</a></span>    <a class="code hl_function" href="classDoublyLinkedList.html#ab16fd160493247d26572b9bef7fa078b">DoublyLinkedList</a>();</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="comment">// Destructor</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#ade7fbfd3c437d039c88ea9c3b9445150">  163</a></span>    <a class="code hl_function" href="classDoublyLinkedList.html#ade7fbfd3c437d039c88ea9c3b9445150">~DoublyLinkedList</a>();</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="comment">// Construtor de copias</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#ac36a59cf8b72beba0ad9d3c20e3e0e2c">  169</a></span>    <a class="code hl_function" href="classDoublyLinkedList.html#ac36a59cf8b72beba0ad9d3c20e3e0e2c">DoublyLinkedList</a>(<span class="keyword">const</span> <a class="code hl_class" href="classDoublyLinkedList.html">DoublyLinkedList&lt;T&gt;</a> &amp; list);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="comment">// Operador de asignacion</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#aff23529f63d6501335018bc1125903c1">  178</a></span>    <a class="code hl_class" href="classDoublyLinkedList.html">DoublyLinkedList&lt;T&gt;</a> &amp; <a class="code hl_function" href="classDoublyLinkedList.html#aff23529f63d6501335018bc1125903c1">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classDoublyLinkedList.html">DoublyLinkedList&lt;T&gt;</a> &amp; list);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#a58e19a65eb23646145608aeae4416700">  184</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDoublyLinkedList.html#a58e19a65eb23646145608aeae4416700">insertBeginning</a>(T value);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#af1f129cfc6c6e2167f6d6a33aa2d32ee">  189</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDoublyLinkedList.html#af1f129cfc6c6e2167f6d6a33aa2d32ee">insertLast</a>(T value);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#ade8ed2122d4c871ad4ef3a1610787fac">  195</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDoublyLinkedList.html#ade8ed2122d4c871ad4ef3a1610787fac">insertIndicatedIndex</a>(T value, <span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#a4c1e50e3ec512527439c213ea54ab733">  199</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDoublyLinkedList.html#a4c1e50e3ec512527439c213ea54ab733">deleteFirst</a>();</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#a7a7c775828cf7eaa02a44aa6ffba20b5">  203</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDoublyLinkedList.html#a7a7c775828cf7eaa02a44aa6ffba20b5">deleteLast</a>();</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#a382de72523d170e53533813a7ef68a41">  208</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDoublyLinkedList.html#a382de72523d170e53533813a7ef68a41">deleteIndicatedIndex</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#a62bbef296fa5ce6ca5191569f018f89f">  213</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classDoublyLinkedList.html#a62bbef296fa5ce6ca5191569f018f89f">searchValue</a>(T value) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#a60cb13a1e90d8d73cd0579460433857c">  218</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classDoublyLinkedList.html#a60cb13a1e90d8d73cd0579460433857c">searchIndex</a>(T value) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#abb8d754d9bf173fb01c5bb94617c95fc">  223</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classDoublyLinkedList.html#abb8d754d9bf173fb01c5bb94617c95fc">isEmpty</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#abc3dcd3694733717e7c4bc9113681948">  228</a></span>    T <a class="code hl_function" href="classDoublyLinkedList.html#abc3dcd3694733717e7c4bc9113681948">getFirstValue</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#a536a3bbb5e5f39bd24a37814eecf5e6c">  233</a></span>    T <a class="code hl_function" href="classDoublyLinkedList.html#a536a3bbb5e5f39bd24a37814eecf5e6c">getLastValue</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#ad60c40161f8e8828872ebd5e51bf8ba0">  238</a></span>    T&amp; <a class="code hl_function" href="classDoublyLinkedList.html#ad60c40161f8e8828872ebd5e51bf8ba0">getValueIndicatedIndex</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#ab65a25099e8de1d4fba0c8bcf6025f45">  244</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDoublyLinkedList.html#ab65a25099e8de1d4fba0c8bcf6025f45">modifyValueIndicatedIndex</a>(<span class="keywordtype">int</span> index,T value);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#a45f0098f13120efa3f63f2e9d545cbb1">  248</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classDoublyLinkedList.html#a45f0098f13120efa3f63f2e9d545cbb1">size</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#a988dab817e94dc8f7b0e8e5b90383971">  252</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDoublyLinkedList.html#a988dab817e94dc8f7b0e8e5b90383971">clear</a>();</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#aefa5cc3a0667c4962ba5102cb92555eb">  256</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDoublyLinkedList.html#aefa5cc3a0667c4962ba5102cb92555eb">printForward</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#ad1a720f90d4d20650ca421154b7807d6">  260</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDoublyLinkedList.html#ad1a720f90d4d20650ca421154b7807d6">printBackwards</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#ab8d58fb70ca34bb567dd099fc47e4b2a">  265</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDoublyLinkedList.html#ab8d58fb70ca34bb567dd099fc47e4b2a">deleteOcurrence</a>(T value);</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#aaf6a6a0d88c74268f8dc7778400b3eb3">  271</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDoublyLinkedList.html#aaf6a6a0d88c74268f8dc7778400b3eb3">deleteCondition</a>(<span class="keywordtype">bool</span> (*func)(<span class="keyword">const</span> T&amp;));</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#ad3a3cefb04c8daee8c056a8def1499f4">  276</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDoublyLinkedList.html#ad3a3cefb04c8daee8c056a8def1499f4">deleteRepeat</a>();</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#a8495bcf1902764e5771fb12602db3fa8">  282</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDoublyLinkedList.html#a8495bcf1902764e5771fb12602db3fa8">sort</a>(<span class="keywordtype">bool</span> (*condition)(<span class="keyword">const</span> T&amp;, <span class="keyword">const</span> T&amp;));</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#a3f9ef00928eead91e84a4ffb538aded2">  288</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDoublyLinkedList.html#a3f9ef00928eead91e84a4ffb538aded2">transfer</a>(<a class="code hl_class" href="classDoublyLinkedList.html">DoublyLinkedList&lt;T&gt;</a>&amp; l);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#aaed7bd686a991fa6f54d2b82ead52181">  296</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDoublyLinkedList.html#aaed7bd686a991fa6f54d2b82ead52181">transfer</a>(<a class="code hl_class" href="classDoublyLinkedList.html">DoublyLinkedList&lt;T&gt;</a> &amp;l, <span class="keywordtype">int</span> initial, <span class="keywordtype">int</span> <span class="keyword">final</span>);</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#a56ba8e31d8c1f776289949f450e3643c">  303</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDoublyLinkedList.html#a56ba8e31d8c1f776289949f450e3643c">transfer</a>(<a class="code hl_class" href="classDoublyLinkedList.html">DoublyLinkedList&lt;T&gt;</a>&amp; l, <span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#a7891d97504db7d2a9f48768981a6582a">  310</a></span>    <span class="keyword">const</span> T &amp; <a class="code hl_function" href="classDoublyLinkedList.html#a7891d97504db7d2a9f48768981a6582a">operator[]</a>(<span class="keywordtype">int</span> i) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#a834f6141fd7884eec8ac85775e8ef88d">  317</a></span>    T &amp; <a class="code hl_function" href="classDoublyLinkedList.html#a834f6141fd7884eec8ac85775e8ef88d">operator[]</a>(<span class="keywordtype">int</span> i);</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno"><a class="line" href="classDoublyLinkedList.html#a36aa2c9a4f0f134029cb5bbd9d180fc6">  323</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDoublyLinkedList.html#a36aa2c9a4f0f134029cb5bbd9d180fc6">intercambiar</a>(<a class="code hl_class" href="classDoublyLinkedList.html">DoublyLinkedList&lt;T&gt;</a> &amp;l);</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
+<div class="foldopen" id="foldopen00329" data-start="{" data-end="};">
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno"><a class="line" href="classDoublyLinkedList_1_1ListEmpty.html">  329</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classDoublyLinkedList_1_1ListEmpty.html">ListEmpty</a> : <span class="keyword">public</span> std::exception {</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno"><a class="line" href="classDoublyLinkedList_1_1ListEmpty.html#aa75e868982efba91ff03e514d2021b85">  335</a></span>        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="classDoublyLinkedList_1_1ListEmpty.html#aa75e868982efba91ff03e514d2021b85">what</a>() <span class="keyword">const</span> throw();</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    };</div>
+</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
+<div class="foldopen" id="foldopen00342" data-start="{" data-end="};">
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno"><a class="line" href="classDoublyLinkedList_1_1OutRange.html">  342</a></span>    class <a class="code hl_class" href="classDoublyLinkedList_1_1OutRange.html">OutRange</a> : public std::exception {</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno"><a class="line" href="classDoublyLinkedList_1_1OutRange.html#adcba3a7c486dd1b9fd964687faa05b02">  348</a></span>        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="classDoublyLinkedList_1_1OutRange.html#adcba3a7c486dd1b9fd964687faa05b02">what</a>() <span class="keyword">const</span> throw();</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    };</div>
+</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>private:</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    <span class="comment">// Tamaño de la lista doblemente enlazada</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    <span class="keywordtype">int</span> size_;</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    <span class="comment">// Doubly linked list</span></div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    struct Element{</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>        <span class="comment">// Constructor por default del struct</span></div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        Element(T value, Element *next = <span class="keyword">nullptr</span>, Element *previous = <span class="keyword">nullptr</span>) ;</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        T value;</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        Element *next;</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>        Element *previous;</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    };</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    Element *first;</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>    Element *last;</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>};</div>
+</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span> </div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span><span class="preprocessor">#include &quot;../templates/DoublyLinkedList.tpp&quot;</span></div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span><span class="preprocessor">#endif </span><span class="comment">//LISTASDOBLEMENTEENLAZADAS_DOUBLYLINKEDLIST_H</span></div>
+<div class="ttc" id="aclassDoublyLinkedList_1_1ListEmpty_html"><div class="ttname"><a href="classDoublyLinkedList_1_1ListEmpty.html">DoublyLinkedList::ListEmpty</a></div><div class="ttdoc">Excepción que se lanza cuando se intenta realizar una operación inválida en una lista vacía.</div><div class="ttdef"><b>Definition</b> DoublyLinkedList.hpp:329</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_1_1ListEmpty_html_aa75e868982efba91ff03e514d2021b85"><div class="ttname"><a href="classDoublyLinkedList_1_1ListEmpty.html#aa75e868982efba91ff03e514d2021b85">DoublyLinkedList::ListEmpty::what</a></div><div class="ttdeci">virtual const char * what() const</div><div class="ttdoc">Proporciona un mensaje describiendo la excepción.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_1_1OutRange_html"><div class="ttname"><a href="classDoublyLinkedList_1_1OutRange.html">DoublyLinkedList::OutRange</a></div><div class="ttdoc">Excepción que se lanza cuando se intenta acceder a un elemento fuera del rango válido de la lista.</div><div class="ttdef"><b>Definition</b> DoublyLinkedList.hpp:342</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_1_1OutRange_html_adcba3a7c486dd1b9fd964687faa05b02"><div class="ttname"><a href="classDoublyLinkedList_1_1OutRange.html#adcba3a7c486dd1b9fd964687faa05b02">DoublyLinkedList::OutRange::what</a></div><div class="ttdeci">virtual const char * what() const</div><div class="ttdoc">Proporciona un mensaje describiendo la excepción.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html"><div class="ttname"><a href="classDoublyLinkedList.html">DoublyLinkedList</a></div><div class="ttdef"><b>Definition</b> DoublyLinkedList.hpp:152</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_a36aa2c9a4f0f134029cb5bbd9d180fc6"><div class="ttname"><a href="classDoublyLinkedList.html#a36aa2c9a4f0f134029cb5bbd9d180fc6">DoublyLinkedList::intercambiar</a></div><div class="ttdeci">void intercambiar(DoublyLinkedList&lt; T &gt; &amp;l)</div><div class="ttdoc">Intercambia todos los elementos de esta lista con los de otra lista.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_a382de72523d170e53533813a7ef68a41"><div class="ttname"><a href="classDoublyLinkedList.html#a382de72523d170e53533813a7ef68a41">DoublyLinkedList::deleteIndicatedIndex</a></div><div class="ttdeci">void deleteIndicatedIndex(int index)</div><div class="ttdoc">Elimina el elemento en el indice indicado de la lista doble.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_a3f9ef00928eead91e84a4ffb538aded2"><div class="ttname"><a href="classDoublyLinkedList.html#a3f9ef00928eead91e84a4ffb538aded2">DoublyLinkedList::transfer</a></div><div class="ttdeci">void transfer(DoublyLinkedList&lt; T &gt; &amp;l)</div><div class="ttdoc">Transfiere todos los elementos de esta lista a otra lista.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_a45f0098f13120efa3f63f2e9d545cbb1"><div class="ttname"><a href="classDoublyLinkedList.html#a45f0098f13120efa3f63f2e9d545cbb1">DoublyLinkedList::size</a></div><div class="ttdeci">int size() const</div><div class="ttdoc">Regresa tamaño de la lista.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_a4c1e50e3ec512527439c213ea54ab733"><div class="ttname"><a href="classDoublyLinkedList.html#a4c1e50e3ec512527439c213ea54ab733">DoublyLinkedList::deleteFirst</a></div><div class="ttdeci">void deleteFirst()</div><div class="ttdoc">Elimina el primer elemento de la lista doble.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_a536a3bbb5e5f39bd24a37814eecf5e6c"><div class="ttname"><a href="classDoublyLinkedList.html#a536a3bbb5e5f39bd24a37814eecf5e6c">DoublyLinkedList::getLastValue</a></div><div class="ttdeci">T getLastValue() const</div><div class="ttdoc">Regresa ultimo valor de la lista.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_a56ba8e31d8c1f776289949f450e3643c"><div class="ttname"><a href="classDoublyLinkedList.html#a56ba8e31d8c1f776289949f450e3643c">DoublyLinkedList::transfer</a></div><div class="ttdeci">void transfer(DoublyLinkedList&lt; T &gt; &amp;l, int index)</div><div class="ttdoc">Transfiere un elemento específico de esta lista a otra lista.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_a58e19a65eb23646145608aeae4416700"><div class="ttname"><a href="classDoublyLinkedList.html#a58e19a65eb23646145608aeae4416700">DoublyLinkedList::insertBeginning</a></div><div class="ttdeci">void insertBeginning(T value)</div><div class="ttdoc">Agrega un nuevo elemento al principio de la lista doble.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_a60cb13a1e90d8d73cd0579460433857c"><div class="ttname"><a href="classDoublyLinkedList.html#a60cb13a1e90d8d73cd0579460433857c">DoublyLinkedList::searchIndex</a></div><div class="ttdeci">int searchIndex(T value) const</div><div class="ttdoc">Regresa inciso del valor a buscar.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_a62bbef296fa5ce6ca5191569f018f89f"><div class="ttname"><a href="classDoublyLinkedList.html#a62bbef296fa5ce6ca5191569f018f89f">DoublyLinkedList::searchValue</a></div><div class="ttdeci">bool searchValue(T value) const</div><div class="ttdoc">Busca elemento en la lista doble.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_a7891d97504db7d2a9f48768981a6582a"><div class="ttname"><a href="classDoublyLinkedList.html#a7891d97504db7d2a9f48768981a6582a">DoublyLinkedList::operator[]</a></div><div class="ttdeci">const T &amp; operator[](int i) const</div><div class="ttdoc">Sobrecarga del operador de acceso para obtener el elemento en una posición específica de la lista de ...</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_a7a7c775828cf7eaa02a44aa6ffba20b5"><div class="ttname"><a href="classDoublyLinkedList.html#a7a7c775828cf7eaa02a44aa6ffba20b5">DoublyLinkedList::deleteLast</a></div><div class="ttdeci">void deleteLast()</div><div class="ttdoc">Elimina el ultimo elemento de la lista doble.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_a834f6141fd7884eec8ac85775e8ef88d"><div class="ttname"><a href="classDoublyLinkedList.html#a834f6141fd7884eec8ac85775e8ef88d">DoublyLinkedList::operator[]</a></div><div class="ttdeci">T &amp; operator[](int i)</div><div class="ttdoc">Sobrecarga del operador de acceso para modificar el elemento en una posición específica de la lista.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_a8495bcf1902764e5771fb12602db3fa8"><div class="ttname"><a href="classDoublyLinkedList.html#a8495bcf1902764e5771fb12602db3fa8">DoublyLinkedList::sort</a></div><div class="ttdeci">void sort(bool(*condition)(const T &amp;, const T &amp;))</div><div class="ttdoc">Ordena los elementos de la lista según una condición específica proporcionada por el usuario.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_a988dab817e94dc8f7b0e8e5b90383971"><div class="ttname"><a href="classDoublyLinkedList.html#a988dab817e94dc8f7b0e8e5b90383971">DoublyLinkedList::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Vacia la lista.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_aaed7bd686a991fa6f54d2b82ead52181"><div class="ttname"><a href="classDoublyLinkedList.html#aaed7bd686a991fa6f54d2b82ead52181">DoublyLinkedList::transfer</a></div><div class="ttdeci">void transfer(DoublyLinkedList&lt; T &gt; &amp;l, int initial, int final)</div><div class="ttdoc">Transfiere un rango de elementos de esta lista a otra lista.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_aaf6a6a0d88c74268f8dc7778400b3eb3"><div class="ttname"><a href="classDoublyLinkedList.html#aaf6a6a0d88c74268f8dc7778400b3eb3">DoublyLinkedList::deleteCondition</a></div><div class="ttdeci">void deleteCondition(bool(*func)(const T &amp;))</div><div class="ttdoc">Elimina todos los elementos de la lista que cumplen con una condición específica.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_ab16fd160493247d26572b9bef7fa078b"><div class="ttname"><a href="classDoublyLinkedList.html#ab16fd160493247d26572b9bef7fa078b">DoublyLinkedList::DoublyLinkedList</a></div><div class="ttdeci">DoublyLinkedList()</div><div class="ttdoc">Constructor por defecto que inicializa una lista doble vacía.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_ab65a25099e8de1d4fba0c8bcf6025f45"><div class="ttname"><a href="classDoublyLinkedList.html#ab65a25099e8de1d4fba0c8bcf6025f45">DoublyLinkedList::modifyValueIndicatedIndex</a></div><div class="ttdeci">void modifyValueIndicatedIndex(int index, T value)</div><div class="ttdoc">Modifica valor indicado de la lista.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_ab8d58fb70ca34bb567dd099fc47e4b2a"><div class="ttname"><a href="classDoublyLinkedList.html#ab8d58fb70ca34bb567dd099fc47e4b2a">DoublyLinkedList::deleteOcurrence</a></div><div class="ttdeci">void deleteOcurrence(T value)</div><div class="ttdoc">Elimina la primera ocurrencia de un valor específico en la lista.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_abb8d754d9bf173fb01c5bb94617c95fc"><div class="ttname"><a href="classDoublyLinkedList.html#abb8d754d9bf173fb01c5bb94617c95fc">DoublyLinkedList::isEmpty</a></div><div class="ttdeci">bool isEmpty() const</div><div class="ttdoc">Verifica si la lista esta vacia.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_abc3dcd3694733717e7c4bc9113681948"><div class="ttname"><a href="classDoublyLinkedList.html#abc3dcd3694733717e7c4bc9113681948">DoublyLinkedList::getFirstValue</a></div><div class="ttdeci">T getFirstValue() const</div><div class="ttdoc">Regresa primer valor de la lista.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_ac36a59cf8b72beba0ad9d3c20e3e0e2c"><div class="ttname"><a href="classDoublyLinkedList.html#ac36a59cf8b72beba0ad9d3c20e3e0e2c">DoublyLinkedList::DoublyLinkedList</a></div><div class="ttdeci">DoublyLinkedList(const DoublyLinkedList&lt; T &gt; &amp;list)</div><div class="ttdoc">Constructor de copia.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_ad1a720f90d4d20650ca421154b7807d6"><div class="ttname"><a href="classDoublyLinkedList.html#ad1a720f90d4d20650ca421154b7807d6">DoublyLinkedList::printBackwards</a></div><div class="ttdeci">void printBackwards() const</div><div class="ttdoc">Imprime lista de ultimo a primero.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_ad3a3cefb04c8daee8c056a8def1499f4"><div class="ttname"><a href="classDoublyLinkedList.html#ad3a3cefb04c8daee8c056a8def1499f4">DoublyLinkedList::deleteRepeat</a></div><div class="ttdeci">void deleteRepeat()</div><div class="ttdoc">Elimina todos los elementos duplicados en la lista, dejando solo una ocurrencia de cada elemento.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_ad60c40161f8e8828872ebd5e51bf8ba0"><div class="ttname"><a href="classDoublyLinkedList.html#ad60c40161f8e8828872ebd5e51bf8ba0">DoublyLinkedList::getValueIndicatedIndex</a></div><div class="ttdeci">T &amp; getValueIndicatedIndex(int index) const</div><div class="ttdoc">Regresa valor indicado de la lista.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_ade7fbfd3c437d039c88ea9c3b9445150"><div class="ttname"><a href="classDoublyLinkedList.html#ade7fbfd3c437d039c88ea9c3b9445150">DoublyLinkedList::~DoublyLinkedList</a></div><div class="ttdeci">~DoublyLinkedList()</div><div class="ttdoc">Destructor que libera la memoria de la lista doble.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_ade8ed2122d4c871ad4ef3a1610787fac"><div class="ttname"><a href="classDoublyLinkedList.html#ade8ed2122d4c871ad4ef3a1610787fac">DoublyLinkedList::insertIndicatedIndex</a></div><div class="ttdeci">void insertIndicatedIndex(T value, int index)</div><div class="ttdoc">Agrega un nuevo elemento en el indice indicado de la lista doble.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_aefa5cc3a0667c4962ba5102cb92555eb"><div class="ttname"><a href="classDoublyLinkedList.html#aefa5cc3a0667c4962ba5102cb92555eb">DoublyLinkedList::printForward</a></div><div class="ttdeci">void printForward() const</div><div class="ttdoc">Imprime lista de primero a ultimo.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_af1f129cfc6c6e2167f6d6a33aa2d32ee"><div class="ttname"><a href="classDoublyLinkedList.html#af1f129cfc6c6e2167f6d6a33aa2d32ee">DoublyLinkedList::insertLast</a></div><div class="ttdeci">void insertLast(T value)</div><div class="ttdoc">Agrega un nuevo elemento al final de la lista doble.</div></div>
+<div class="ttc" id="aclassDoublyLinkedList_html_aff23529f63d6501335018bc1125903c1"><div class="ttname"><a href="classDoublyLinkedList.html#aff23529f63d6501335018bc1125903c1">DoublyLinkedList::operator=</a></div><div class="ttdeci">DoublyLinkedList&lt; T &gt; &amp; operator=(const DoublyLinkedList&lt; T &gt; &amp;list)</div><div class="ttdoc">Sobrecarga del operador de asignación.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>
