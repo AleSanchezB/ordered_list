@@ -1,0 +1,40 @@
+\doxysection{Referencia del archivo src/headers/\+Ordered\+List.hpp}
+\hypertarget{OrderedList_8hpp}{}\label{OrderedList_8hpp}\index{src/headers/OrderedList.hpp@{src/headers/OrderedList.hpp}}
+
+
+Implementacion de la clase \doxylink{classOrderedList}{Ordered\+List}.  
+
+
+{\ttfamily \#include $<$exception$>$}\newline
+{\ttfamily \#include "{}Doubly\+Linked\+List.\+hpp"{}}\newline
+{\ttfamily \#include "{}../templates/\+Ordered\+List.\+tpp"{}}\newline
+Gráfico de dependencias incluidas en Ordered\+List.\+hpp\+:
+% FIG 0
+\doxysubsubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classOrderedList}{Ordered\+List$<$ T $>$}}
+\item 
+class \mbox{\hyperlink{classOrderedList_1_1ListEmpty}{Ordered\+List$<$ T $>$\+::\+List\+Empty}}
+\begin{DoxyCompactList}\small\item\em Excepción que se lanza cuando se intenta realizar una operación inválida en una lista vacía. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classOrderedList_1_1OutRange}{Ordered\+List$<$ T $>$\+::\+Out\+Range}}
+\begin{DoxyCompactList}\small\item\em Excepción que se lanza cuando se intenta acceder a un elemento fuera del rango válido de la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{OrderedList_8hpp_ac760979bf753b3b1257ee457b1afbff6}\label{OrderedList_8hpp_ac760979bf753b3b1257ee457b1afbff6} 
+\#define {\bfseries NO\+\_\+\+ENCONTRADO}~(-\/1)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Implementacion de la clase \doxylink{classOrderedList}{Ordered\+List}. 
+
+\begin{DoxyAuthor}{Autor}
+Braulio Alessandro Sánchez Bermúdez 
+
+Carlos Enrique Mancillas Duran 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+22/03/2024 
+\end{DoxyDate}

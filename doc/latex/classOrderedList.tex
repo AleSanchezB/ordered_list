@@ -1,0 +1,348 @@
+\doxysection{Referencia de la plantilla de la clase Ordered\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\hypertarget{classOrderedList}{}\label{classOrderedList}\index{OrderedList$<$ T $>$@{OrderedList$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Ordered\+List.\+hpp$>$}
+
+\doxysubsubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classOrderedList_1_1ListEmpty}{List\+Empty}}
+\begin{DoxyCompactList}\small\item\em Excepción que se lanza cuando se intenta realizar una operación inválida en una lista vacía. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classOrderedList_1_1OutRange}{Out\+Range}}
+\begin{DoxyCompactList}\small\item\em Excepción que se lanza cuando se intenta acceder a un elemento fuera del rango válido de la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classOrderedList_a1c1251b4f1fd924fd55a8d616b3436bd}\label{classOrderedList_a1c1251b4f1fd924fd55a8d616b3436bd} 
+{\bfseries Ordered\+List} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto que inicializa una lista ordenada doble vac\'{\i}a. \end{DoxyCompactList}\item 
+\Hypertarget{classOrderedList_ae78bf9ddae66d0b9b7eb0aff26ef371a}\label{classOrderedList_ae78bf9ddae66d0b9b7eb0aff26ef371a} 
+{\bfseries Ordered\+List} (const \mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$ \&l1, const \mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$ \&l2)
+\item 
+\Hypertarget{classOrderedList_a1d5ba93c6bdeecf3a39b0443143b9e54}\label{classOrderedList_a1d5ba93c6bdeecf3a39b0443143b9e54} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Ordered\+List} ()
+\begin{DoxyCompactList}\small\item\em Destructor que libera la memoria de la lista ordenada doble. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classOrderedList_a9c8d2b9f16ca5034a8b47b0944036e90}{Ordered\+List}} (const \mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$ \&list)
+\begin{DoxyCompactList}\small\item\em Constructor de copia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$ \& \mbox{\hyperlink{classOrderedList_a9a222042d6b3fbe5a966db21fc907c0c}{operator=}} (const \mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$ \&list)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador de asignaci\'{o}n. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classOrderedList_a8c9935f05461c8de55ac2253ed7d97b6}{add}} (T value)
+\begin{DoxyCompactList}\small\item\em Agrega un nuevo elemento ordenadamente en laa posición que le corresponde al elemento. \end{DoxyCompactList}\item 
+\Hypertarget{classOrderedList_a5ec125e7164ec86cdbeb22f3f1b32c01}\label{classOrderedList_a5ec125e7164ec86cdbeb22f3f1b32c01} 
+void {\bfseries pop} ()
+\begin{DoxyCompactList}\small\item\em Elimina cualquier elemento repetido de la lista. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classOrderedList_a76ce6ca21029d8f56213186e49e1f36d}{search\+Value}} (T value) const
+\begin{DoxyCompactList}\small\item\em Busca elemento en la lista. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classOrderedList_a32621295bcd188a8b456c62c85516634}{search\+Index}} (T value) const
+\begin{DoxyCompactList}\small\item\em Regresa inciso del valor a buscar. \end{DoxyCompactList}\item 
+\Hypertarget{classOrderedList_a95620d15c2a69db647941c3929f84e51}\label{classOrderedList_a95620d15c2a69db647941c3929f84e51} 
+bool {\bfseries is\+Empty} () const
+\begin{DoxyCompactList}\small\item\em Verifica si la lista esta vacia. \end{DoxyCompactList}\item 
+\Hypertarget{classOrderedList_a192fd967f3602dc0d0a5e67e17116f99}\label{classOrderedList_a192fd967f3602dc0d0a5e67e17116f99} 
+int {\bfseries size} () const
+\begin{DoxyCompactList}\small\item\em Regresa tamaño de la lista. \end{DoxyCompactList}\item 
+\Hypertarget{classOrderedList_a57080a867a92b16919c89f84896d4400}\label{classOrderedList_a57080a867a92b16919c89f84896d4400} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Vacia la lista. \end{DoxyCompactList}\item 
+\Hypertarget{classOrderedList_a3ff74745c908823479d65231b41e8f18}\label{classOrderedList_a3ff74745c908823479d65231b41e8f18} 
+void {\bfseries print\+Forward} () const
+\begin{DoxyCompactList}\small\item\em Imprime lista de primero a ultimo. \end{DoxyCompactList}\item 
+\Hypertarget{classOrderedList_a478d10e9bf21ce2784b092c62efb65b6}\label{classOrderedList_a478d10e9bf21ce2784b092c62efb65b6} 
+void {\bfseries print\+Backwards} () const
+\begin{DoxyCompactList}\small\item\em Imprime lista de ultimo a primero. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classOrderedList_a054b6339444c4d1562a9ae0ed5fbcffd}{operator\mbox{[}$\,$\mbox{]}}} (int i) const
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador de acceso para obtener el elemento en una posición específica de la lista de forma constante. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classOrderedList_ad281c39141c85022defa9abd66d807a7}{operator\mbox{[}$\,$\mbox{]}}} (int i)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador de acceso para modificar el elemento en una posición específica de la lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$ \mbox{\hyperlink{classOrderedList_a94a6e2260aac4e8b9593f9c40cd255f8}{merge}} (const \mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$ \&l)
+\begin{DoxyCompactList}\small\item\em Intercambia todos los elementos de esta lista con los de otra lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\subsubsection*{template$<$typename T$>$\newline
+class Ordered\+List$<$ T $>$}
+Esta clase template ofrece una implementaci\'{o}n de lista ordenada doble con operaciones para agregar, eliminar elementos entre otras.
+
+
+\begin{DoxyTemplParams}{Parámetros de plantilla}
+{\em T} & Tipo de elementos almacenados en la lista ordenada doble.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ Ejemplo.cpp}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{OrderedList_8hpp}{OrderedList.hpp}}"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#include\ <exception>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#include\ <iostream>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#include\ <functional>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Función\ de\ comparación\ para\ ordenamiento\ ascendente}}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{bool}\ ascendingOrder(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ a,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ b)\ \{}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{return}\ a\ >\ b;}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Función\ para\ determinar\ si\ un\ valor\ es\ par\ (utilizada\ en\ deleteCondition)}}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{bool}\ isEven(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ value)\ \{}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{return}\ value\ \%\ 2\ ==\ 0;}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ main()\ \{}
+\DoxyCodeLine{\textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{classOrderedList}{OrderedList<int>}}\ list;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Insertar\ elementos\ al\ principio\ y\ al\ final}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.insertBeginning(3);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.insertLast(1);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.insertLast(4);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.insertLast(1);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.insertLast(5);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Insertar\ en\ índice\ indicado}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.insertIndicatedIndex(9,\ 2);\ \textcolor{comment}{//\ Inserta\ el\ 9\ en\ la\ posición\ 2}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Imprimir\ la\ lista}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Lista\ después\ de\ inserciones:\ "{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classOrderedList_a3ff74745c908823479d65231b41e8f18}{printForward}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Eliminar\ el\ primer\ y\ último\ elemento}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.deleteFirst();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.deleteLast();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Eliminar\ en\ índice\ indicado}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.deleteIndicatedIndex(2);\ \textcolor{comment}{//\ Elimina\ el\ elemento\ en\ la\ posición\ 1}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Imprimir\ la\ lista\ después\ de\ las\ eliminaciones}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Lista\ después\ de\ eliminaciones:\ "{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classOrderedList_a3ff74745c908823479d65231b41e8f18}{printForward}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Buscar\ un\ valor\ y\ obtener\ su\ índice}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ valueToSearch\ =\ 4;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (list.\mbox{\hyperlink{classOrderedList_a76ce6ca21029d8f56213186e49e1f36d}{searchValue}}(valueToSearch))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Valor\ "{}}\ <<\ valueToSearch\ <<\ \textcolor{stringliteral}{"{}\ encontrado\ en\ el\ índice\ "{}}\ <<\ list.\mbox{\hyperlink{classOrderedList_a32621295bcd188a8b456c62c85516634}{searchIndex}}(valueToSearch)\ <<\ std::endl;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Valor\ "{}}\ <<\ valueToSearch\ <<\ \textcolor{stringliteral}{"{}\ no\ encontrado."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Modificar\ un\ valor\ en\ un\ índice\ específico}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.modifyValueIndicatedIndex(1,\ 2);\ \textcolor{comment}{//\ Cambia\ el\ valor\ en\ el\ índice\ 1\ a\ 2}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Imprimir\ la\ lista\ después\ de\ la\ modificación}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Lista\ después\ de\ modificar\ el\ índice\ 1:\ "{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classOrderedList_a3ff74745c908823479d65231b41e8f18}{printForward}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ordenar\ la\ lista}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.sort(ascendingOrder);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Imprimir\ la\ lista\ después\ de\ ordenar}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Lista\ después\ de\ ordenar:\ "{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classOrderedList_a3ff74745c908823479d65231b41e8f18}{printForward}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Eliminar\ elementos\ bajo\ una\ condición\ (eliminar\ números\ pares)}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.deleteCondition(isEven);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Imprimir\ la\ lista\ después\ de\ eliminar\ elementos\ pares}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Lista\ después\ de\ eliminar\ números\ pares:\ "{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classOrderedList_a3ff74745c908823479d65231b41e8f18}{printForward}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Eliminar\ ocurrencias\ de\ un\ valor\ específico}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.deleteOcurrence(1);\ \textcolor{comment}{//\ Elimina\ la\ primera\ ocurrencia\ del\ valor\ 1}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Imprimir\ la\ lista\ después\ de\ eliminar\ ocurrencias\ de\ 1}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Lista\ después\ de\ eliminar\ la\ primera\ ocurrencia\ de\ 1:\ "{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classOrderedList_a3ff74745c908823479d65231b41e8f18}{printForward}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Comprobar\ si\ la\ lista\ está\ vacía}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (list.\mbox{\hyperlink{classOrderedList_a95620d15c2a69db647941c3929f84e51}{isEmpty}}())\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}La\ lista\ está\ vacía."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}La\ lista\ no\ está\ vacía."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtener\ el\ tamaño\ de\ la\ lista}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Tamaño\ de\ la\ lista:\ "{}}\ <<\ list.\mbox{\hyperlink{classOrderedList_a192fd967f3602dc0d0a5e67e17116f99}{size}}()\ <<\ std::endl;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Limpiar\ la\ lista}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classOrderedList_a57080a867a92b16919c89f84896d4400}{clear}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Comprobar\ si\ la\ lista\ está\ vacía\ después\ de\ limpiar}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (list.\mbox{\hyperlink{classOrderedList_a95620d15c2a69db647941c3929f84e51}{isEmpty}}())\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}La\ lista\ está\ vacía\ después\ de\ limpiar."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}La\ lista\ no\ está\ vacía\ después\ de\ limpiar."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (std::exception\&\ msg)\ \{}
+\DoxyCodeLine{\ \ \ \ std::cout\ <<\ msg.what()\ <<\ std::endl;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\begin{DoxyVerb}Salida:
+ Lista después de inserciones: (3, 1, 9, 4, 1, 5)
+ Lista después de eliminaciones: (1, 9, 1)
+ Valor 4 no encontrado.
+ Lista después de modificar el índice 1: (1, 2, 1)
+ Lista después de ordenar: (2, 1, 1)
+ Lista después de eliminar números pares: (1, 1)
+ Lista después de eliminar la primera ocurrencia de 1: ()
+ La lista está vacía.
+ Tamaño de la lista: 0
+ La lista está vacía después de limpiar.\end{DoxyVerb}
+ 
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classOrderedList_a9c8d2b9f16ca5034a8b47b0944036e90}\label{classOrderedList_a9c8d2b9f16ca5034a8b47b0944036e90} 
+\index{OrderedList$<$ T $>$@{OrderedList$<$ T $>$}!OrderedList@{OrderedList}}
+\index{OrderedList@{OrderedList}!OrderedList$<$ T $>$@{OrderedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{OrderedList()}{OrderedList()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$\mbox{\hyperlink{classOrderedList}{\+::\+Ordered\+List}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+Constructor de copia. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list} & Otra lista de la cual se copiar\'{a}n los elementos. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classOrderedList_a8c9935f05461c8de55ac2253ed7d97b6}\label{classOrderedList_a8c9935f05461c8de55ac2253ed7d97b6} 
+\index{OrderedList$<$ T $>$@{OrderedList$<$ T $>$}!add@{add}}
+\index{add@{add}!OrderedList$<$ T $>$@{OrderedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$\+::add (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})}
+
+
+
+Agrega un nuevo elemento ordenadamente en laa posición que le corresponde al elemento. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em value} & El valor a agregar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classOrderedList_a94a6e2260aac4e8b9593f9c40cd255f8}\label{classOrderedList_a94a6e2260aac4e8b9593f9c40cd255f8} 
+\index{OrderedList$<$ T $>$@{OrderedList$<$ T $>$}!merge@{merge}}
+\index{merge@{merge}!OrderedList$<$ T $>$@{OrderedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$ \mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$\+::merge (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$ \&}]{l }\end{DoxyParamCaption})}
+
+
+
+Intercambia todos los elementos de esta lista con los de otra lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em l} & La lista con la que se intercambiarán los elementos. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classOrderedList_a9a222042d6b3fbe5a966db21fc907c0c}\label{classOrderedList_a9a222042d6b3fbe5a966db21fc907c0c} 
+\index{OrderedList$<$ T $>$@{OrderedList$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!OrderedList$<$ T $>$@{OrderedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$ \& \mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga del operador de asignaci\'{o}n. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list} & Otra lista ordenada doble de la cual se copiar\'{a}n los elementos. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em const} & {\bfseries{char \texorpdfstring{$\ast$}{*}}} La lista ordenada doble copia no puede ser creado.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Devuelve}
+Referencia a la lista actual. 
+\end{DoxyReturn}
+\Hypertarget{classOrderedList_ad281c39141c85022defa9abd66d807a7}\label{classOrderedList_ad281c39141c85022defa9abd66d807a7} 
+\index{OrderedList$<$ T $>$@{OrderedList$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!OrderedList$<$ T $>$@{OrderedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga del operador de acceso para modificar el elemento en una posición específica de la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & El índice del elemento a modificar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Una referencia al elemento en el índice especificado, permitiendo su modificación. 
+\end{DoxyReturn}
+\Hypertarget{classOrderedList_a054b6339444c4d1562a9ae0ed5fbcffd}\label{classOrderedList_a054b6339444c4d1562a9ae0ed5fbcffd} 
+\index{OrderedList$<$ T $>$@{OrderedList$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!OrderedList$<$ T $>$@{OrderedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Sobrecarga del operador de acceso para obtener el elemento en una posición específica de la lista de forma constante. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & El índice del elemento a obtener. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Una referencia constante al elemento en el índice especificado. 
+\end{DoxyReturn}
+\Hypertarget{classOrderedList_a32621295bcd188a8b456c62c85516634}\label{classOrderedList_a32621295bcd188a8b456c62c85516634} 
+\index{OrderedList$<$ T $>$@{OrderedList$<$ T $>$}!searchIndex@{searchIndex}}
+\index{searchIndex@{searchIndex}!OrderedList$<$ T $>$@{OrderedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{searchIndex()}{searchIndex()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$\+::search\+Index (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption}) const}
+
+
+
+Regresa inciso del valor a buscar. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em value} & valor que buscaremos en la lista. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classOrderedList_a76ce6ca21029d8f56213186e49e1f36d}\label{classOrderedList_a76ce6ca21029d8f56213186e49e1f36d} 
+\index{OrderedList$<$ T $>$@{OrderedList$<$ T $>$}!searchValue@{searchValue}}
+\index{searchValue@{searchValue}!OrderedList$<$ T $>$@{OrderedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{searchValue()}{searchValue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classOrderedList}{Ordered\+List}}$<$ T $>$\+::search\+Value (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption}) const}
+
+
+
+Busca elemento en la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em value} & Valor a verificar si esta en la lista. \\
+\hline
+\end{DoxyParams}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/\mbox{\hyperlink{OrderedList_8hpp}{Ordered\+List.\+hpp}}\end{DoxyCompactItemize}

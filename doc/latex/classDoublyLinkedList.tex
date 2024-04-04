@@ -1,0 +1,565 @@
+\doxysection{Referencia de la plantilla de la clase Doubly\+Linked\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\hypertarget{classDoublyLinkedList}{}\label{classDoublyLinkedList}\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Doubly\+Linked\+List.\+hpp$>$}
+
+\doxysubsubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classDoublyLinkedList_1_1ListEmpty}{List\+Empty}}
+\begin{DoxyCompactList}\small\item\em Excepción que se lanza cuando se intenta realizar una operación inválida en una lista vacía. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classDoublyLinkedList_1_1OutRange}{Out\+Range}}
+\begin{DoxyCompactList}\small\item\em Excepción que se lanza cuando se intenta acceder a un elemento fuera del rango válido de la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classDoublyLinkedList_ab16fd160493247d26572b9bef7fa078b}\label{classDoublyLinkedList_ab16fd160493247d26572b9bef7fa078b} 
+{\bfseries Doubly\+Linked\+List} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto que inicializa una lista doble vac\'{\i}a. \end{DoxyCompactList}\item 
+\Hypertarget{classDoublyLinkedList_ade7fbfd3c437d039c88ea9c3b9445150}\label{classDoublyLinkedList_ade7fbfd3c437d039c88ea9c3b9445150} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Doubly\+Linked\+List} ()
+\begin{DoxyCompactList}\small\item\em Destructor que libera la memoria de la lista doble. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDoublyLinkedList_ac36a59cf8b72beba0ad9d3c20e3e0e2c}{Doubly\+Linked\+List}} (const \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \&list)
+\begin{DoxyCompactList}\small\item\em Constructor de copia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \& \mbox{\hyperlink{classDoublyLinkedList_aff23529f63d6501335018bc1125903c1}{operator=}} (const \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \&list)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador de asignaci\'{o}n. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_a58e19a65eb23646145608aeae4416700}{insert\+Beginning}} (T value)
+\begin{DoxyCompactList}\small\item\em Agrega un nuevo elemento al principio de la lista doble. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_af1f129cfc6c6e2167f6d6a33aa2d32ee}{insert\+Last}} (T value)
+\begin{DoxyCompactList}\small\item\em Agrega un nuevo elemento al final de la lista doble. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_ade8ed2122d4c871ad4ef3a1610787fac}{insert\+Indicated\+Index}} (T value, int index)
+\begin{DoxyCompactList}\small\item\em Agrega un nuevo elemento en el indice indicado de la lista doble. \end{DoxyCompactList}\item 
+\Hypertarget{classDoublyLinkedList_a4c1e50e3ec512527439c213ea54ab733}\label{classDoublyLinkedList_a4c1e50e3ec512527439c213ea54ab733} 
+void {\bfseries delete\+First} ()
+\begin{DoxyCompactList}\small\item\em Elimina el primer elemento de la lista doble. \end{DoxyCompactList}\item 
+\Hypertarget{classDoublyLinkedList_a7a7c775828cf7eaa02a44aa6ffba20b5}\label{classDoublyLinkedList_a7a7c775828cf7eaa02a44aa6ffba20b5} 
+void {\bfseries delete\+Last} ()
+\begin{DoxyCompactList}\small\item\em Elimina el ultimo elemento de la lista doble. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_a382de72523d170e53533813a7ef68a41}{delete\+Indicated\+Index}} (int index)
+\begin{DoxyCompactList}\small\item\em Elimina el elemento en el indice indicado de la lista doble. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDoublyLinkedList_a62bbef296fa5ce6ca5191569f018f89f}{search\+Value}} (T value) const
+\begin{DoxyCompactList}\small\item\em Busca elemento en la lista doble. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDoublyLinkedList_a60cb13a1e90d8d73cd0579460433857c}{search\+Index}} (T value) const
+\begin{DoxyCompactList}\small\item\em Regresa inciso del valor a buscar. \end{DoxyCompactList}\item 
+\Hypertarget{classDoublyLinkedList_abb8d754d9bf173fb01c5bb94617c95fc}\label{classDoublyLinkedList_abb8d754d9bf173fb01c5bb94617c95fc} 
+bool {\bfseries is\+Empty} () const
+\begin{DoxyCompactList}\small\item\em Verifica si la lista esta vacia. \end{DoxyCompactList}\item 
+\Hypertarget{classDoublyLinkedList_abc3dcd3694733717e7c4bc9113681948}\label{classDoublyLinkedList_abc3dcd3694733717e7c4bc9113681948} 
+T {\bfseries get\+First\+Value} () const
+\begin{DoxyCompactList}\small\item\em Regresa primer valor de la lista. \end{DoxyCompactList}\item 
+\Hypertarget{classDoublyLinkedList_a536a3bbb5e5f39bd24a37814eecf5e6c}\label{classDoublyLinkedList_a536a3bbb5e5f39bd24a37814eecf5e6c} 
+T {\bfseries get\+Last\+Value} () const
+\begin{DoxyCompactList}\small\item\em Regresa ultimo valor de la lista. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classDoublyLinkedList_ad60c40161f8e8828872ebd5e51bf8ba0}{get\+Value\+Indicated\+Index}} (int index) const
+\begin{DoxyCompactList}\small\item\em Regresa valor indicado de la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_ab65a25099e8de1d4fba0c8bcf6025f45}{modify\+Value\+Indicated\+Index}} (int index, T value)
+\begin{DoxyCompactList}\small\item\em Modifica valor indicado de la lista. \end{DoxyCompactList}\item 
+\Hypertarget{classDoublyLinkedList_a45f0098f13120efa3f63f2e9d545cbb1}\label{classDoublyLinkedList_a45f0098f13120efa3f63f2e9d545cbb1} 
+int {\bfseries size} () const
+\begin{DoxyCompactList}\small\item\em Regresa tamaño de la lista. \end{DoxyCompactList}\item 
+\Hypertarget{classDoublyLinkedList_a988dab817e94dc8f7b0e8e5b90383971}\label{classDoublyLinkedList_a988dab817e94dc8f7b0e8e5b90383971} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Vacia la lista. \end{DoxyCompactList}\item 
+\Hypertarget{classDoublyLinkedList_aefa5cc3a0667c4962ba5102cb92555eb}\label{classDoublyLinkedList_aefa5cc3a0667c4962ba5102cb92555eb} 
+void {\bfseries print\+Forward} () const
+\begin{DoxyCompactList}\small\item\em Imprime lista de primero a ultimo. \end{DoxyCompactList}\item 
+\Hypertarget{classDoublyLinkedList_ad1a720f90d4d20650ca421154b7807d6}\label{classDoublyLinkedList_ad1a720f90d4d20650ca421154b7807d6} 
+void {\bfseries print\+Backwards} () const
+\begin{DoxyCompactList}\small\item\em Imprime lista de ultimo a primero. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_ab8d58fb70ca34bb567dd099fc47e4b2a}{delete\+Ocurrence}} (T value)
+\begin{DoxyCompactList}\small\item\em Elimina la primera ocurrencia de un valor específico en la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_aaf6a6a0d88c74268f8dc7778400b3eb3}{delete\+Condition}} (bool(\texorpdfstring{$\ast$}{*}func)(const T \&))
+\begin{DoxyCompactList}\small\item\em Elimina todos los elementos de la lista que cumplen con una condición específica. \end{DoxyCompactList}\item 
+\Hypertarget{classDoublyLinkedList_ad3a3cefb04c8daee8c056a8def1499f4}\label{classDoublyLinkedList_ad3a3cefb04c8daee8c056a8def1499f4} 
+void {\bfseries delete\+Repeat} ()
+\begin{DoxyCompactList}\small\item\em Elimina todos los elementos duplicados en la lista, dejando solo una ocurrencia de cada elemento. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_a8495bcf1902764e5771fb12602db3fa8}{sort}} (bool(\texorpdfstring{$\ast$}{*}condition)(const T \&, const T \&))
+\begin{DoxyCompactList}\small\item\em Ordena los elementos de la lista según una condición específica proporcionada por el usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_a3f9ef00928eead91e84a4ffb538aded2}{transfer}} (\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \&l)
+\begin{DoxyCompactList}\small\item\em Transfiere todos los elementos de esta lista a otra lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_aaed7bd686a991fa6f54d2b82ead52181}{transfer}} (\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \&l, int initial, int final)
+\begin{DoxyCompactList}\small\item\em Transfiere un rango de elementos de esta lista a otra lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_a56ba8e31d8c1f776289949f450e3643c}{transfer}} (\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \&l, int index)
+\begin{DoxyCompactList}\small\item\em Transfiere un elemento específico de esta lista a otra lista. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classDoublyLinkedList_a7891d97504db7d2a9f48768981a6582a}{operator\mbox{[}$\,$\mbox{]}}} (int i) const
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador de acceso para obtener el elemento en una posición específica de la lista de forma constante. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classDoublyLinkedList_a834f6141fd7884eec8ac85775e8ef88d}{operator\mbox{[}$\,$\mbox{]}}} (int i)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador de acceso para modificar el elemento en una posición específica de la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_a36aa2c9a4f0f134029cb5bbd9d180fc6}{intercambiar}} (\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \&l)
+\begin{DoxyCompactList}\small\item\em Intercambia todos los elementos de esta lista con los de otra lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\subsubsection*{template$<$typename T$>$\newline
+class Doubly\+Linked\+List$<$ T $>$}
+Esta clase template ofrece una implementaci\'{o}n de lista doble con operaciones para agregar, eliminar elementos, y consultar el ultimo de la lista, entre otras.
+
+
+\begin{DoxyTemplParams}{Parámetros de plantilla}
+{\em T} & Tipo de elementos almacenados en la lista doble.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ Ejemplo.cpp}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#include\ "{}DoublyLinkedList.hpp"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#include\ <exception>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#include\ <iostream>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#include\ <functional>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Función\ de\ comparación\ para\ ordenamiento\ ascendente}}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{bool}\ ascendingOrder(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ a,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ b)\ \{}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{return}\ a\ >\ b;}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Función\ para\ determinar\ si\ un\ valor\ es\ par\ (utilizada\ en\ deleteCondition)}}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{bool}\ isEven(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ value)\ \{}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{return}\ value\ \%\ 2\ ==\ 0;}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ main()\ \{}
+\DoxyCodeLine{\textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{classDoublyLinkedList}{DoublyLinkedList<int>}}\ list;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Insertar\ elementos\ al\ principio\ y\ al\ final}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_a58e19a65eb23646145608aeae4416700}{insertBeginning}}(3);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_af1f129cfc6c6e2167f6d6a33aa2d32ee}{insertLast}}(1);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_af1f129cfc6c6e2167f6d6a33aa2d32ee}{insertLast}}(4);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_af1f129cfc6c6e2167f6d6a33aa2d32ee}{insertLast}}(1);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_af1f129cfc6c6e2167f6d6a33aa2d32ee}{insertLast}}(5);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Insertar\ en\ índice\ indicado}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_ade8ed2122d4c871ad4ef3a1610787fac}{insertIndicatedIndex}}(9,\ 2);\ \textcolor{comment}{//\ Inserta\ el\ 9\ en\ la\ posición\ 2}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Imprimir\ la\ lista}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Lista\ después\ de\ inserciones:\ "{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_aefa5cc3a0667c4962ba5102cb92555eb}{printForward}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Eliminar\ el\ primer\ y\ último\ elemento}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_a4c1e50e3ec512527439c213ea54ab733}{deleteFirst}}();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_a7a7c775828cf7eaa02a44aa6ffba20b5}{deleteLast}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Eliminar\ en\ índice\ indicado}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_a382de72523d170e53533813a7ef68a41}{deleteIndicatedIndex}}(2);\ \textcolor{comment}{//\ Elimina\ el\ elemento\ en\ la\ posición\ 1}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Imprimir\ la\ lista\ después\ de\ las\ eliminaciones}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Lista\ después\ de\ eliminaciones:\ "{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_aefa5cc3a0667c4962ba5102cb92555eb}{printForward}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Buscar\ un\ valor\ y\ obtener\ su\ índice}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ valueToSearch\ =\ 4;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (list.\mbox{\hyperlink{classDoublyLinkedList_a62bbef296fa5ce6ca5191569f018f89f}{searchValue}}(valueToSearch))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Valor\ "{}}\ <<\ valueToSearch\ <<\ \textcolor{stringliteral}{"{}\ encontrado\ en\ el\ índice\ "{}}\ <<\ list.\mbox{\hyperlink{classDoublyLinkedList_a60cb13a1e90d8d73cd0579460433857c}{searchIndex}}(valueToSearch)\ <<\ std::endl;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Valor\ "{}}\ <<\ valueToSearch\ <<\ \textcolor{stringliteral}{"{}\ no\ encontrado."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Modificar\ un\ valor\ en\ un\ índice\ específico}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_ab65a25099e8de1d4fba0c8bcf6025f45}{modifyValueIndicatedIndex}}(1,\ 2);\ \textcolor{comment}{//\ Cambia\ el\ valor\ en\ el\ índice\ 1\ a\ 2}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Imprimir\ la\ lista\ después\ de\ la\ modificación}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Lista\ después\ de\ modificar\ el\ índice\ 1:\ "{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_aefa5cc3a0667c4962ba5102cb92555eb}{printForward}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ordenar\ la\ lista}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_a8495bcf1902764e5771fb12602db3fa8}{sort}}(ascendingOrder);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Imprimir\ la\ lista\ después\ de\ ordenar}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Lista\ después\ de\ ordenar:\ "{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_aefa5cc3a0667c4962ba5102cb92555eb}{printForward}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Eliminar\ elementos\ bajo\ una\ condición\ (eliminar\ números\ pares)}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_aaf6a6a0d88c74268f8dc7778400b3eb3}{deleteCondition}}(isEven);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Imprimir\ la\ lista\ después\ de\ eliminar\ elementos\ pares}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Lista\ después\ de\ eliminar\ números\ pares:\ "{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_aefa5cc3a0667c4962ba5102cb92555eb}{printForward}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Eliminar\ ocurrencias\ de\ un\ valor\ específico}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_ab8d58fb70ca34bb567dd099fc47e4b2a}{deleteOcurrence}}(1);\ \textcolor{comment}{//\ Elimina\ la\ primera\ ocurrencia\ del\ valor\ 1}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Imprimir\ la\ lista\ después\ de\ eliminar\ ocurrencias\ de\ 1}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Lista\ después\ de\ eliminar\ la\ primera\ ocurrencia\ de\ 1:\ "{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_aefa5cc3a0667c4962ba5102cb92555eb}{printForward}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Comprobar\ si\ la\ lista\ está\ vacía}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (list.\mbox{\hyperlink{classDoublyLinkedList_abb8d754d9bf173fb01c5bb94617c95fc}{isEmpty}}())\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}La\ lista\ está\ vacía."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}La\ lista\ no\ está\ vacía."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtener\ el\ tamaño\ de\ la\ lista}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Tamaño\ de\ la\ lista:\ "{}}\ <<\ list.\mbox{\hyperlink{classDoublyLinkedList_a45f0098f13120efa3f63f2e9d545cbb1}{size}}()\ <<\ std::endl;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Limpiar\ la\ lista}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ list.\mbox{\hyperlink{classDoublyLinkedList_a988dab817e94dc8f7b0e8e5b90383971}{clear}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Comprobar\ si\ la\ lista\ está\ vacía\ después\ de\ limpiar}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (list.\mbox{\hyperlink{classDoublyLinkedList_abb8d754d9bf173fb01c5bb94617c95fc}{isEmpty}}())\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}La\ lista\ está\ vacía\ después\ de\ limpiar."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}La\ lista\ no\ está\ vacía\ después\ de\ limpiar."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (std::exception\&\ msg)\ \{}
+\DoxyCodeLine{\ \ \ \ std::cout\ <<\ msg.what()\ <<\ std::endl;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\begin{DoxyVerb}Salida:
+ Lista después de inserciones: (3, 1, 9, 4, 1, 5)
+ Lista después de eliminaciones: (1, 9, 1)
+ Valor 4 no encontrado.
+ Lista después de modificar el índice 1: (1, 2, 1)
+ Lista después de ordenar: (2, 1, 1)
+ Lista después de eliminar números pares: (1, 1)
+ Lista después de eliminar la primera ocurrencia de 1: ()
+ La lista está vacía.
+ Tamaño de la lista: 0
+ La lista está vacía después de limpiar.\end{DoxyVerb}
+ 
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classDoublyLinkedList_ac36a59cf8b72beba0ad9d3c20e3e0e2c}\label{classDoublyLinkedList_ac36a59cf8b72beba0ad9d3c20e3e0e2c} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!DoublyLinkedList@{DoublyLinkedList}}
+\index{DoublyLinkedList@{DoublyLinkedList}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DoublyLinkedList()}{DoublyLinkedList()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\mbox{\hyperlink{classDoublyLinkedList}{\+::\+Doubly\+Linked\+List}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+Constructor de copia. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list} & Otra lista de la cual se copiar\'{a}n los elementos. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classDoublyLinkedList_aaf6a6a0d88c74268f8dc7778400b3eb3}\label{classDoublyLinkedList_aaf6a6a0d88c74268f8dc7778400b3eb3} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!deleteCondition@{deleteCondition}}
+\index{deleteCondition@{deleteCondition}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deleteCondition()}{deleteCondition()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::delete\+Condition (\begin{DoxyParamCaption}\item[{bool(\texorpdfstring{$\ast$}{*})(const T \&)}]{func }\end{DoxyParamCaption})}
+
+
+
+Elimina todos los elementos de la lista que cumplen con una condición específica. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em func} & Un puntero a función que define la condición. Esta función debe tomar un elemento de tipo T y devolver un valor booleano. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoublyLinkedList_a382de72523d170e53533813a7ef68a41}\label{classDoublyLinkedList_a382de72523d170e53533813a7ef68a41} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!deleteIndicatedIndex@{deleteIndicatedIndex}}
+\index{deleteIndicatedIndex@{deleteIndicatedIndex}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deleteIndicatedIndex()}{deleteIndicatedIndex()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::delete\+Indicated\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Elimina el elemento en el indice indicado de la lista doble. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em index} & indice el cual sera eliminado. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoublyLinkedList_ab8d58fb70ca34bb567dd099fc47e4b2a}\label{classDoublyLinkedList_ab8d58fb70ca34bb567dd099fc47e4b2a} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!deleteOcurrence@{deleteOcurrence}}
+\index{deleteOcurrence@{deleteOcurrence}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deleteOcurrence()}{deleteOcurrence()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::delete\+Ocurrence (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})}
+
+
+
+Elimina la primera ocurrencia de un valor específico en la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em value} & El valor a eliminar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoublyLinkedList_ad60c40161f8e8828872ebd5e51bf8ba0}\label{classDoublyLinkedList_ad60c40161f8e8828872ebd5e51bf8ba0} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!getValueIndicatedIndex@{getValueIndicatedIndex}}
+\index{getValueIndicatedIndex@{getValueIndicatedIndex}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getValueIndicatedIndex()}{getValueIndicatedIndex()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::get\+Value\+Indicated\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Regresa valor indicado de la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em index} & inciso de la lista a regresar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoublyLinkedList_a58e19a65eb23646145608aeae4416700}\label{classDoublyLinkedList_a58e19a65eb23646145608aeae4416700} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!insertBeginning@{insertBeginning}}
+\index{insertBeginning@{insertBeginning}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insertBeginning()}{insertBeginning()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::insert\+Beginning (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})}
+
+
+
+Agrega un nuevo elemento al principio de la lista doble. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em value} & El valor a agregar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoublyLinkedList_ade8ed2122d4c871ad4ef3a1610787fac}\label{classDoublyLinkedList_ade8ed2122d4c871ad4ef3a1610787fac} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!insertIndicatedIndex@{insertIndicatedIndex}}
+\index{insertIndicatedIndex@{insertIndicatedIndex}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insertIndicatedIndex()}{insertIndicatedIndex()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::insert\+Indicated\+Index (\begin{DoxyParamCaption}\item[{T}]{value,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Agrega un nuevo elemento en el indice indicado de la lista doble. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em value} & El valor a agregar. \\
+\hline
+{\em index} & El indice en donde se agregara. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoublyLinkedList_af1f129cfc6c6e2167f6d6a33aa2d32ee}\label{classDoublyLinkedList_af1f129cfc6c6e2167f6d6a33aa2d32ee} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!insertLast@{insertLast}}
+\index{insertLast@{insertLast}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insertLast()}{insertLast()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::insert\+Last (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})}
+
+
+
+Agrega un nuevo elemento al final de la lista doble. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em value} & El valor a agregar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoublyLinkedList_a36aa2c9a4f0f134029cb5bbd9d180fc6}\label{classDoublyLinkedList_a36aa2c9a4f0f134029cb5bbd9d180fc6} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!intercambiar@{intercambiar}}
+\index{intercambiar@{intercambiar}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{intercambiar()}{intercambiar()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::intercambiar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \&}]{l }\end{DoxyParamCaption})}
+
+
+
+Intercambia todos los elementos de esta lista con los de otra lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em l} & La lista con la que se intercambiarán los elementos. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoublyLinkedList_ab65a25099e8de1d4fba0c8bcf6025f45}\label{classDoublyLinkedList_ab65a25099e8de1d4fba0c8bcf6025f45} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!modifyValueIndicatedIndex@{modifyValueIndicatedIndex}}
+\index{modifyValueIndicatedIndex@{modifyValueIndicatedIndex}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{modifyValueIndicatedIndex()}{modifyValueIndicatedIndex()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::modify\+Value\+Indicated\+Index (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{T}]{value }\end{DoxyParamCaption})}
+
+
+
+Modifica valor indicado de la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em index} & inciso de la lista a modificar. \\
+\hline
+{\em value} & valor que se insertara en la lista. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoublyLinkedList_aff23529f63d6501335018bc1125903c1}\label{classDoublyLinkedList_aff23529f63d6501335018bc1125903c1} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \& \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga del operador de asignaci\'{o}n. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list} & Otra lista doble de la cual se copiar\'{a}n los elementos. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em const} & {\bfseries{char \texorpdfstring{$\ast$}{*}}} La lista doble copia no puede ser creado.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Devuelve}
+Referencia a la lista actual. 
+\end{DoxyReturn}
+\Hypertarget{classDoublyLinkedList_a834f6141fd7884eec8ac85775e8ef88d}\label{classDoublyLinkedList_a834f6141fd7884eec8ac85775e8ef88d} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga del operador de acceso para modificar el elemento en una posición específica de la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & El índice del elemento a modificar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Una referencia al elemento en el índice especificado, permitiendo su modificación. 
+\end{DoxyReturn}
+\Hypertarget{classDoublyLinkedList_a7891d97504db7d2a9f48768981a6582a}\label{classDoublyLinkedList_a7891d97504db7d2a9f48768981a6582a} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Sobrecarga del operador de acceso para obtener el elemento en una posición específica de la lista de forma constante. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & El índice del elemento a obtener. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Una referencia constante al elemento en el índice especificado. 
+\end{DoxyReturn}
+\Hypertarget{classDoublyLinkedList_a60cb13a1e90d8d73cd0579460433857c}\label{classDoublyLinkedList_a60cb13a1e90d8d73cd0579460433857c} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!searchIndex@{searchIndex}}
+\index{searchIndex@{searchIndex}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{searchIndex()}{searchIndex()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::search\+Index (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption}) const}
+
+
+
+Regresa inciso del valor a buscar. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em value} & valor que buscaremos en la lista. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoublyLinkedList_a62bbef296fa5ce6ca5191569f018f89f}\label{classDoublyLinkedList_a62bbef296fa5ce6ca5191569f018f89f} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!searchValue@{searchValue}}
+\index{searchValue@{searchValue}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{searchValue()}{searchValue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::search\+Value (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption}) const}
+
+
+
+Busca elemento en la lista doble. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em value} & Valor a verificar si esta en la lista. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoublyLinkedList_a8495bcf1902764e5771fb12602db3fa8}\label{classDoublyLinkedList_a8495bcf1902764e5771fb12602db3fa8} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}\item[{bool(\texorpdfstring{$\ast$}{*})(const T \&, const T \&)}]{condition }\end{DoxyParamCaption})}
+
+
+
+Ordena los elementos de la lista según una condición específica proporcionada por el usuario. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em condition} & Un puntero a función que define la condición de ordenamiento. Esta función debe tomar dos elementos de tipo T y devolver un valor booleano. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoublyLinkedList_a3f9ef00928eead91e84a4ffb538aded2}\label{classDoublyLinkedList_a3f9ef00928eead91e84a4ffb538aded2} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!transfer@{transfer}}
+\index{transfer@{transfer}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{transfer()}{transfer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::transfer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \&}]{l }\end{DoxyParamCaption})}
+
+
+
+Transfiere todos los elementos de esta lista a otra lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em l} & La lista destino a la que se transferirán los elementos. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoublyLinkedList_a56ba8e31d8c1f776289949f450e3643c}\label{classDoublyLinkedList_a56ba8e31d8c1f776289949f450e3643c} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!transfer@{transfer}}
+\index{transfer@{transfer}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{transfer()}{transfer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::transfer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \&}]{l,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Transfiere un elemento específico de esta lista a otra lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em l} & La lista destino a la que se transferirá el elemento. \\
+\hline
+{\em index} & El índice del elemento en esta lista que se transferirá. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoublyLinkedList_aaed7bd686a991fa6f54d2b82ead52181}\label{classDoublyLinkedList_aaed7bd686a991fa6f54d2b82ead52181} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!transfer@{transfer}}
+\index{transfer@{transfer}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{transfer()}{transfer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::transfer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \&}]{l,  }\item[{int}]{initial,  }\item[{int}]{final }\end{DoxyParamCaption})}
+
+
+
+Transfiere un rango de elementos de esta lista a otra lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em l} & La lista destino a la que se transferirán los elementos. \\
+\hline
+{\em initial} & El índice inicial del rango en esta lista. \\
+\hline
+{\em final} & El índice final del rango en esta lista. \\
+\hline
+\end{DoxyParams}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Doubly\+Linked\+List.\+hpp\end{DoxyCompactItemize}
